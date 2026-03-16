@@ -1,4 +1,4 @@
-# ✨ Forescribe: Modern Testimonial Grid & Auth System
+# ✨ Forescribe-Frontend-Assignment
 
 A high-performance, visually stunning testimonial grid and authentication interface built for modern SaaS applications. This project features a sophisticated masonry layout, premium glassmorphism effects, and ultra-smooth animations.
 
@@ -55,12 +55,14 @@ Forescribe-Frontend-Assignment/
 
 ## 🧠 Development Assumptions
 
-During the engineering of this project, the following assumptions were made:
+During the engineering of this project, the following key assumptions were made to ensure a high-quality delivery:
 
-- **Browser Extension Resilience**: Assumed users may have extensions (like Text Blaze) that modify the DOM. Implemented a `mounted` state guard to prevent hydration errors.
-- **Client-Side Interactivity**: Focused extensively on Client Components (`'use client'`) to leverage the full power of Framer Motion for premium UX.
-- **Asset Availability**: All brand logos and testimonial images are expected to be present in `/public/Assets` for high-performance local resolution.
-- **Theme Constraints**: Designed specifically with a `#1c1527` (Dark Navy) modal theme and `#1f1f1f` (Charcoal) page background for maximum visual depth.
+- **Browser Extension Resilience**: Recognized that modern browser environments are often modified by extensions (e.g., Text Blaze, password managers). Implemented a `mounted` state guard to capture these changes gracefully and eliminate React hydration mismatches.
+- **Responsive-First Architecture**: Assumed a wide range of devices. The grid and modal are designed to scale fluidly from mobile (90% width) to ultra-wide displays (up to 1700px), ensuring design integrity on all viewports.
+- **Mock Data Persistence**: As a frontend-focused task, data is managed via a centralized local structure in `app/page.tsx`. This assumes that in a production environment, this would be swapped for a REST/GraphQL API layer.
+- **GPU-Accelerated Animations**: Leveraged Framer Motion’s hardware-accelerated transforms (translateY, scale) assuming most users are on modern browsers that support high-frame-rate CSS animations.
+- **Direct Asset Resolution**: Assumed all branding assets must be served locally from `/public/Assets` to minimize external HTTP requests and ensure pixel-perfect rendering using Next.js Image Optimization.
+- **Brand Identity**: Adopted a signature `#1d1626` gradient for the authentication layer and `#1f1f1f` for the main canvas, assuming a primary goal of achieving deep, high-contrast visual hierarchy.
 
 ---
 
