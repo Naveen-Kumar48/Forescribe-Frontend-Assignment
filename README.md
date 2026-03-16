@@ -1,4 +1,4 @@
-# ✨ Forescribe: High-Fidelity Testimonial Grid & Auth Gateway
+# ✨ Forescribe Frontend Assignment
 
 A pixel-perfect frontend masterpiece engineered with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**. This project delivers a sophisticated, responsive masonry grid and a premium glassmorphism authentication interface—optimized for ultra-smooth 60fps performance and high-density visual clarity.
 
@@ -25,10 +25,7 @@ Follow these steps to get the project running locally on your machine:
    npm run dev
    ```
 
-4. **Access the Application**
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
-
----
+   ---
 
 ## 📁 Directory Structure
 
