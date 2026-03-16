@@ -19,10 +19,10 @@ export default function BackdropOverlay({ children, onClose }: BackdropOverlayPr
         >
             {/* Background with blur and gradient */}
             <div
-                className="absolute inset-0 bg-black/40 backdrop-blur-md"
+                className="absolute inset-0 bg-black/20 backdrop-blur-md"
                 onClick={onClose}
             >
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-purple-900/40" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-purple-900/20" />
             </div>
 
             {children}

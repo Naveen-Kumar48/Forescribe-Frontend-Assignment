@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'motion/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SignUpModal from '@/components/Modal/SignUpModal';
 import { cn } from '@/lib/utils';
 
@@ -281,6 +281,11 @@ function BlockCard({ block, index, colIndex }: { block: Block; index: number; co
 
 export default function Page() {
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <>
@@ -337,7 +342,7 @@ export default function Page() {
         </motion.main>
       </AnimatePresence>
 
-      <SignUpModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      {mounted && <SignUpModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
     </>
   );
 }
