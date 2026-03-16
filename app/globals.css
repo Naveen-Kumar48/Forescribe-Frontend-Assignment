@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.animate-scroll-up {
+    animation: scroll-up 60s linear infinite;
+    will-change: transform;
+}
+
+/* Ensure identical speed on mobile and desktop */
+@media (max-width: 768px) {
+    .animate-scroll-up {
+        animation-duration: 60s;
+    }
+}
+
+@media (min-width: 769px) {
+    .animate-scroll-up {
+        animation-duration: 60s;
+    }
+}

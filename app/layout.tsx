@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Testimonial Grid',
-  description: 'A responsive masonry grid of company logos and user testimonials with animations.',
+  title: 'Forescribe-Frontend-Assignment',
+  description: 'Forescribe-Frontend-Assignment',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

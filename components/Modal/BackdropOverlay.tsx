@@ -17,12 +17,16 @@ export default function BackdropOverlay({ children, onClose }: BackdropOverlayPr
             transition={{ duration: 0.4 }}
             className="fixed inset-0 z-[100] flex items-center justify-center p-6"
         >
-            {/* Background with blur and gradient */}
+            {/* Background with blur and custom 3-color gradient */}
             <div
-                className="absolute inset-0 bg-black/20 backdrop-blur-md"
-                onClick={onClose}
+                className="absolute inset-0 backdrop-blur-[2px]"
             >
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-purple-900/20" />
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        background: 'linear-gradient(90deg, rgba(5,5,10,0.25) 0%, rgba(20,10,40,0.25) 40%, rgba(90,40,200,0.18) 100%)'
+                    }}
+                />
             </div>
 
             {children}

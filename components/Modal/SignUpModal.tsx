@@ -13,15 +13,6 @@ interface SignUpModalProps {
 }
 
 export default function SignUpModal({ isOpen, onClose }: SignUpModalProps) {
-    // Close on ESC
-    useEffect(() => {
-        const handleEsc = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') onClose();
-        };
-        window.addEventListener('keydown', handleEsc);
-        return () => window.removeEventListener('keydown', handleEsc);
-    }, [onClose]);
-
     return (
         <AnimatePresence>
             {isOpen && (
@@ -35,23 +26,24 @@ export default function SignUpModal({ isOpen, onClose }: SignUpModalProps) {
                         aria-modal="true"
                         aria-labelledby="modal-title"
                         className={cn(
-                            "relative z-[101] w-full max-w-[90%] md:max-w-[420px] lg:max-w-[460px]",
-                            "bg-gradient-to-br from-[#1d1626] to-[#120d1a] backdrop-blur-2xl border border-white/10 rounded-[2.5rem] shadow-2xl overflow-hidden p-8 py-8"
+                            "relative z-[101] w-full max-w-[95%] md:max-w-[460px]",
+                            "bg-[#1a1626]/90 backdrop-blur-xl border border-white/15 rounded-2xl",
+                            "shadow-[0_24px_64px_rgba(0,0,0,0.5),inset_0_1px_0_0_rgba(255,255,255,0.06)] overflow-hidden px-10 py-6"
                         )}
                     >
                         {/* Header */}
-                        <div className="flex flex-col items-center text-center space-y-4 mb-6">
-                            <div className="w-16 h-16 flex items-center justify-center">
+                        <div className="flex flex-col items-center text-center space-y-3 mb-5">
+                            <div className="flex items-center justify-center">
                                 <Image
                                     src="/Assets/signuplogo.svg"
                                     alt="Forescribe Logo"
-                                    width={40}
-                                    height={40}
+                                    width={28}
+                                    height={28}
                                     className="object-contain"
                                 />
                             </div>
                             <div className="space-y-1">
-                                <h2 id="modal-title" className="text-3xl font-bold text-white tracking-tight">
+                                <h2 id="modal-title" className="text-2xl font-bold text-white tracking-tight">
                                     Welcome to Forescribe
                                 </h2>
                             </div>
@@ -72,7 +64,7 @@ export default function SignUpModal({ isOpen, onClose }: SignUpModalProps) {
                         </div>
 
                         {/* Footer Text */}
-                        <div className="mt-8 text-center">
+                        <div className="mt-5 text-center">
                             <p className="text-[11px] leading-relaxed text-white/50 px-6">
                                 By clicking "Continue with Google/Microsoft" above, you acknowledge that you have read and understood, and agree to Forescribe's
                                 <a href="#" className="text-white/80 hover:underline mx-1">Terms & Conditions</a>
@@ -80,17 +72,6 @@ export default function SignUpModal({ isOpen, onClose }: SignUpModalProps) {
                                 <a href="#" className="text-white/80 hover:underline mx-1">Privacy Policy</a>.
                             </p>
                         </div>
-
-                        {/* Close Button (Optional but good for UX) */}
-                        <button
-                            onClick={onClose}
-                            className="absolute top-6 right-8 text-white/30 hover:text-white transition-colors p-2"
-                            aria-label="Close modal"
-                        >
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                            </svg>
-                        </button>
                     </motion.div>
                 </BackdropOverlay>
             )}

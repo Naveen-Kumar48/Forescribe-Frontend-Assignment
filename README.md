@@ -1,6 +1,6 @@
-# ✨ Forescribe-Frontend-Assignment
+# ✨ Forescribe: High-Fidelity Testimonial Grid & Auth Gateway
 
-A high-performance, visually stunning testimonial grid and authentication interface built for modern SaaS applications. This project features a sophisticated masonry layout, premium glassmorphism effects, and ultra-smooth animations.
+A pixel-perfect frontend masterpiece engineered with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**. This project delivers a sophisticated, responsive masonry grid and a premium glassmorphism authentication interface—optimized for ultra-smooth 60fps performance and high-density visual clarity.
 
 ---
 

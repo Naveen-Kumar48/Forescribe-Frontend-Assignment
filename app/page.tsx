@@ -235,11 +235,11 @@ function BlockCard({ block, index, colIndex }: { block: Block; index: number; co
         ease: [0.21, 0.47, 0.32, 0.98]
       }}
       whileHover={{
-        scale: 1.01,
+        scale: 1.02,
         transition: { duration: 0.2 }
       }}
       className={cn(
-        'group relative flex flex-col items-center text-center rounded-[1.5rem] shadow-sm transition-all duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.15)] hover:brightness-[0.99] border border-white/5 overflow-hidden min-h-[380px]',
+        'group relative flex flex-col items-center text-center rounded-[1.5rem] shadow-sm transition-all duration-300 hover:shadow-[0_20px_50px_rgba(255,255,255,0.12)] hover:brightness-125 border border-white/5 hover:border-white/30 overflow-hidden min-h-[380px]',
         block.bgClass,
         'pb-8'
       )}
@@ -265,12 +265,12 @@ function BlockCard({ block, index, colIndex }: { block: Block; index: number; co
           )}
         </div>
       </div>
-      <div className={cn('px-8', 'mt-8')}>
-        <h3 className="text-[32px] font-bold text-[#1e1b4b] tracking-tight">{block.title}</h3>
+      <div className={cn('px-6 md:px-8', 'mt-6 md:mt-8')}>
+        <h3 className="text-2xl md:text-[32px] font-bold text-[#1e1b4b] tracking-tight">{block.title}</h3>
         {isCompany ? (
-          <p className="text-[18px] text-[#6b7280] font-semibold mt-2 tracking-tight">{block.subtitle}</p>
+          <p className="text-base md:text-[18px] text-[#6b7280] font-semibold mt-2 tracking-tight">{block.subtitle}</p>
         ) : (
-          <p className="text-[18px] text-[#1e1b4b] mt-5 leading-relaxed font-medium opacity-90 px-2 leading-[1.4]">
+          <p className="text-base md:text-[18px] text-[#1e1b4b] mt-4 md:mt-5 leading-relaxed font-medium opacity-90 px-2 leading-[1.4]">
             &quot;{block.text}&quot;
           </p>
         )}
@@ -303,42 +303,65 @@ export default function Page() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               onClick={() => setIsModalOpen(true)}
-              className="fixed top-8 right-8 z-40 bg-[#8b3dff] hover:bg-[#9d5aff] text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-[#8b3dff]/30 transition-all hover:scale-105 active:scale-95 border border-white/10"
+              className="fixed top-4 right-4 md:top-8 md:right-8 z-40 bg-[#8b3dff] hover:bg-[#9d5aff] text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full text-sm md:text-base font-bold shadow-lg shadow-[#8b3dff]/30 transition-all hover:scale-105 active:scale-95 border border-white/10"
             >
               Sign Up
             </motion.button>
           )}
 
           {/* Top Left Logo - Persistent Branding */}
-          <div className="fixed top-8 left-8 z-[110] transition-transform hover:scale-105">
+          <div className="fixed top-4 left-4 md:top-8 md:left-8 z-[110] transition-transform hover:scale-105">
             <Image
               src="/Assets/navlogo.png"
               alt="Forescribe Logo"
-              width={160}
-              height={44}
-              className="object-contain"
+              width={140}
+              height={38}
+              className="object-contain w-[100px] md:w-[160px] h-auto"
               priority
             />
           </div>
 
-          {/* Grid Section */}
-          <section className="max-w-[1700px] mx-auto px-4 pt-16 pb-24">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 xl:gap-3">
-              {columns.map((col, index) => (
-                <div
-                  key={col.id}
-                  className={cn(
-                    'flex flex-col gap-2 xl:gap-3',
-                    index % 2 !== 0 ? 'lg:mt-32' : 'lg:mt-0'
-                  )}
-                >
-                  {col.blocks.map((block, bIndex) => (
-                    <BlockCard key={block.id} block={block} index={bIndex} colIndex={index} />
+          {/* Grid Section - Infinite Scroll */}
+          <div className="overflow-hidden h-screen">
+            <div className="animate-scroll-up">
+              {/* Grid - First Copy */}
+              <section className="max-w-[1700px] mx-auto px-4 pt-16 pb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 xl:gap-3">
+                  {columns.map((col, index) => (
+                    <div
+                      key={col.id}
+                      className={cn(
+                        'flex flex-col gap-2 xl:gap-3',
+                        index % 2 !== 0 ? 'lg:mt-32' : 'lg:mt-0'
+                      )}
+                    >
+                      {col.blocks.map((block, bIndex) => (
+                        <BlockCard key={block.id} block={block} index={bIndex} colIndex={index} />
+                      ))}
+                    </div>
                   ))}
                 </div>
-              ))}
+              </section>
+              {/* Grid - Duplicate Copy for seamless loop */}
+              <section className="max-w-[1700px] mx-auto px-4 pb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 xl:gap-3">
+                  {columns.map((col, index) => (
+                    <div
+                      key={`dup-${col.id}`}
+                      className={cn(
+                        'flex flex-col gap-2 xl:gap-3',
+                        index % 2 !== 0 ? 'lg:mt-32' : 'lg:mt-0'
+                      )}
+                    >
+                      {col.blocks.map((block, bIndex) => (
+                        <BlockCard key={`dup-${block.id}`} block={block} index={bIndex} colIndex={index} />
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </section>
             </div>
-          </section>
+          </div>
         </motion.main>
       </AnimatePresence>
 
