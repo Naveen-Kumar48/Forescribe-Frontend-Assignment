@@ -2,6 +2,8 @@
 
 A pixel-perfect frontend masterpiece engineered with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**. This project delivers a sophisticated, responsive masonry grid and a premium glassmorphism authentication interface—optimized for ultra-smooth 60fps performance and high-density visual clarity.
 
+🌐 **Live Demo**: [https://forescribe-frontend-assignment.vercel.app/](https://forescribe-frontend-assignment.vercel.app/)
+
 ---
 
 ## 🚀 Installation & Setup
