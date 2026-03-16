@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import Image from 'next/image';
-import { cn } from '@/lib/utils'; // I should check if this exists, otherwise I'll define a simple one or use clsx
+import { cn } from '@/lib/utils';
 
 interface AuthButtonProps {
     provider: 'google' | 'microsoft';

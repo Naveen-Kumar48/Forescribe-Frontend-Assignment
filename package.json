@@ -1,13 +1,12 @@
 {
-  "name": "Forescribe-Frontend-Assignment",
+  "name": "forescribe-frontend-assignment",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "clean": "next clean"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@google/genai": "^1.45.0",
