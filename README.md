@@ -66,9 +66,8 @@ Forescribe-Frontend-Assignment/
 │   ├── Modal/                    # Authentication modal components
 │   │   ├── AuthButton.tsx        # Styled button for auth actions
 │   │   ├── BackdropOverlay.tsx   # Glassmorphic backdrop overlay
-│   │   └── SignUpModal.tsx       # Main signup modal component
-│   ├── AvatarImage.tsx           # Optimized avatar image component
-│   └── ContactForm.tsx           # Lead generation contact form
+│   │   └── SignUpForm.tsx        # Main signup modal component
+│   └── AvatarImage.tsx           # Optimized avatar image component
 │
 ├── hooks/                        # Custom React hooks
 │   └── use-mobile.ts             # Mobile viewport detection hook
