@@ -76,7 +76,7 @@ Forescribe-Frontend-Assignment/
 │   └── utils.ts                  # Tailwind class merger (cn function)
 │
 ├── public/                       # Static assets
-│   └── Assets/                   # Brand logos, icons, and user photos 
+│   └── assets/                   # Brand logos, icons, and user photos 
 │
 ├── .next/                        # Next.js build output (generated)
 |
@@ -106,7 +106,7 @@ During the engineering of this project, the following key assumptions were made 
 
 - **GPU-Accelerated Animations**: Leveraged Framer Motion's hardware-accelerated transforms (translateY, scale) assuming most users are on modern browsers that support high-frame-rate CSS animations.
 
-- **Direct Asset Resolution**: Assumed all branding assets must be served locally from `/public/Assets` to minimize external HTTP requests and ensure pixel-perfect rendering using Next.js Image Optimization.
+- **Direct Asset Resolution**: Assumed all branding assets must be served locally from `/public/assets` to minimize external HTTP requests and ensure pixel-perfect rendering using Next.js Image Optimization.
 
 ### Design Assumptions
 

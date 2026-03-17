@@ -15,15 +15,24 @@
     will-change: transform;
 }
 
-/* Ensure identical speed on mobile and desktop */
-@media (max-width: 768px) {
+/* Ensure identical visual speed across all breakpoints */
+/* Mobile: 1 column -> 300s */
+@media (max-width: 767px) {
     .animate-scroll-up {
-        animation-duration: 300s;
+        animation: scroll-up 300s linear infinite;
     }
 }
 
-@media (min-width: 769px) {
+/* Tablet: 2 columns -> 150s */
+@media (min-width: 768px) and (max-width: 1023px) {
     .animate-scroll-up {
-        animation-duration: 60s;
+        animation: scroll-up 150s linear infinite;
+    }
+}
+
+/* Laptop/Desktop: 5 columns -> 60s */
+@media (min-width: 1024px) {
+    .animate-scroll-up {
+        animation: scroll-up 60s linear infinite;
     }
 }
