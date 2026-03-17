@@ -122,8 +122,6 @@ Beyond the standard requirements, the following enhancements were added:
 
 - **Glassmorphism 2.0**: Implemented a deep-blur backdrop with a customized 20% opacity charcoal overlay for a premium SaaS feel.
 
-- **Pixel Perfection**: Standardized border-radius (`2.5rem`) and standardized typography sizing for a professional, cohesive identity.
-
 ### Performance Optimizations
 
 - **Hydration Safety**: Added automatic mounting guards to ensure zero-error rendering across all browsers.
