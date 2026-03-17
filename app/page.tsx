@@ -42,7 +42,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-[#fcdbc1]',
         title: 'Flatfile',
         subtitle: 'Project Management',
-        logoPath: '/Assets/Flatfile.png',
+        logoPath: '/assets/Flatfile.png',
       },
       {
         id: 'ariana',
@@ -51,7 +51,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-transparent',
         title: 'Ariana',
         text: 'We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.',
-        image: '/Assets/Ariana.svg',
+        image: '/assets/Ariana.svg',
       },
       {
         id: 'namecheap',
@@ -60,7 +60,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-[#ff4f17]',
         title: 'Name Cheap',
         subtitle: 'Project Management',
-        logoPath: '/Assets/namecheap.svg',
+        logoPath: '/assets/namecheap.svg',
       },
       {
         id: 'jackmark1',
@@ -69,7 +69,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-transparent',
         title: 'Jack Mark',
         text: 'We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.',
-        image: '/Assets/JackMark.png',
+        image: '/assets/JackMark.png',
       },
     ],
   },
@@ -83,7 +83,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-[#10a37f]',
         title: 'ChatGPT',
         subtitle: 'Project Management',
-        logoPath: '/Assets/ChatGPT.png',
+        logoPath: '/assets/ChatGPT.png',
       },
       {
         id: 'kate',
@@ -92,7 +92,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-transparent',
         title: 'Kate',
         text: 'We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.',
-        image: '/Assets/Kate.png',
+        image: '/assets/Kate.png',
       },
       {
         id: 'qb',
@@ -101,7 +101,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-[#2ca01c]',
         title: 'QB',
         subtitle: 'Project Management',
-        logoPath: '/Assets/QB.png',
+        logoPath: '/assets/QB.png',
       },
     ],
   },
@@ -115,7 +115,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-[#000000]',
         title: 'Notion',
         subtitle: 'Project Management',
-        logoPath: '/Assets/Notion.png',
+        logoPath: '/assets/Notion.png',
       },
       {
         id: 'andrew',
@@ -124,7 +124,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-transparent',
         title: 'Andrew',
         text: 'We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.',
-        image: '/Assets/Andrew.svg',
+        image: '/assets/Andrew.svg',
       },
       {
         id: 'skype',
@@ -133,7 +133,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-[#00aff0]',
         title: 'Skype',
         subtitle: 'Project Management',
-        logoPath: '/Assets/Skype.png',
+        logoPath: '/assets/Skype.png',
       },
       {
         id: 'jackmark2',
@@ -142,7 +142,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-transparent',
         title: 'Jack Mark',
         text: 'We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.',
-        image: '/Assets/JackMark.png',
+        image: '/assets/JackMark.png',
       },
     ],
   },
@@ -156,7 +156,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-[#0077b5]',
         title: 'LinkedIn',
         subtitle: 'Project Management',
-        logoPath: '/Assets/LinkedIn.png',
+        logoPath: '/assets/LinkedIn.png',
       },
       {
         id: 'paul',
@@ -165,7 +165,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-transparent',
         title: 'Paul',
         text: 'We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.',
-        image: '/Assets/Paul.png',
+        image: '/assets/Paul.png',
       },
       {
         id: 'aws',
@@ -174,7 +174,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-[#232f3e]',
         title: 'AWS',
         subtitle: 'Project Management',
-        logoPath: '/Assets/Amazon Web Services.png',
+        logoPath: '/assets/Amazon Web Services.png',
       },
     ],
   },
@@ -188,7 +188,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-[#00c4cc]',
         title: 'Canva',
         subtitle: 'Project Management',
-        logoPath: '/Assets/Canva.png',
+        logoPath: '/assets/Canva.png',
       },
       {
         id: 'janemary',
@@ -197,7 +197,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-transparent',
         title: 'Jane Mary',
         text: 'We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.',
-        image: '/Assets/Janey Mary.png',
+        image: '/assets/Janey Mary.png',
       },
       {
         id: 'chimpmonk',
@@ -206,7 +206,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-[#ffe01b]',
         title: 'Chimp Monk',
         subtitle: 'Project Management',
-        logoPath: '/Assets/Chipmonk.svg',
+        logoPath: '/assets/Chipmonk.svg',
       },
       {
         id: 'jackmark3',
@@ -215,7 +215,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-transparent',
         title: 'Jack Mark',
         text: 'We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.',
-        image: '/Assets/JackMark.png',
+        image: '/assets/JackMark.png',
       },
     ],
   },
@@ -302,7 +302,7 @@ export default function Page() {
           <div className="fixed top-4 left-4 md:top-8 md:left-8 z-[110] transition-transform hover:scale-105">
             <a href="/" className="block focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded-lg">
               <Image
-                src="/Assets/navlogo.svg"
+                src="/assets/navlogo.svg"
                 alt="Forescribe Logo"
                 width={163}
                 height={38}

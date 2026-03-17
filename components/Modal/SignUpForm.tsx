@@ -21,7 +21,7 @@ export default function SignUpForm() {
             {/* Header */}
             <div className="flex flex-col items-center text-center space-y-4 mb-8">
                 <Image
-                    src="/Assets/signuplogo.gif"
+                    src="/assets/signuplogo.gif"
                     alt="Forescribe Logo"
                     width={64}
                     height={64}
@@ -40,12 +40,12 @@ export default function SignUpForm() {
                 <AuthButton
                     provider="google"
                     text="Continue with Google"
-                    iconSrc="/Assets/1298745_google_brand_branding_logo_network_icon 1.png"
+                    iconSrc="/assets/1298745_google_brand_branding_logo_network_icon 1.png"
                 />
                 <AuthButton
                     provider="microsoft"
                     text="Continue with Microsoft"
-                    iconSrc="/Assets/_x37_8-microsoft.png"
+                    iconSrc="/assets/_x37_8-microsoft.png"
                 />
             </div>
 

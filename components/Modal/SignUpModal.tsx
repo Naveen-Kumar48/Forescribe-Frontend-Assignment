@@ -35,7 +35,7 @@ export default function SignUpModal({ isOpen, onClose }: SignUpModalProps) {
                         <div className="flex flex-col items-center text-center space-y-3 mb-5">
                             <div className="flex items-center justify-center">
                                 <Image
-                                    src="/Assets/signuplogo.svg"
+                                    src="/assets/signuplogo.svg"
                                     alt="Forescribe Logo"
                                     width={28}
                                     height={28}
@@ -54,12 +54,12 @@ export default function SignUpModal({ isOpen, onClose }: SignUpModalProps) {
                             <AuthButton
                                 provider="google"
                                 text="Continue with Google"
-                                iconSrc="/Assets/1298745_google_brand_branding_logo_network_icon 1.png"
+                                iconSrc="/assets/1298745_google_brand_branding_logo_network_icon 1.png"
                             />
                             <AuthButton
                                 provider="microsoft"
                                 text="Continue with Microsoft"
-                                iconSrc="/Assets/_x37_8-microsoft.png"
+                                iconSrc="/assets/_x37_8-microsoft.png"
                             />
                         </div>
 
