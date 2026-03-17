@@ -24,7 +24,7 @@ export default function BackdropOverlay({ children, onClose }: BackdropOverlayPr
                 <div
                     className="absolute inset-0"
                     style={{
-                        background: 'linear-gradient(90deg, rgba(5,5,10,0.25) 0%, rgba(20,10,40,0.25) 40%, rgba(90,40,200,0.18) 100%)'
+                        background: 'linear-gradient(118.88deg, rgba(0, 0, 0, 0.5) 38.24%, rgba(139, 61, 255, 0.5) 97.48%, rgba(139, 61, 255, 0.5) 108.58%)'
                     }}
                 />
             </div>

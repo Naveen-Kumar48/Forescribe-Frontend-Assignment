@@ -4,8 +4,10 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
-import SignUpModal from '@/components/Modal/SignUpModal';
+import SignUpForm from '@/components/Modal/SignUpForm';
+// import BackdropOverlay from '@/components/Modal/BackdropOverlay';
 import { cn } from '@/lib/utils';
+import BackdropOverlay from '@/components/Modal/BackdropOverlay';
 
 const DynamicAvatar = dynamic(() => import('@/components/AvatarImage'), {
   ssr: false,
@@ -49,7 +51,7 @@ const columns: { id: string; blocks: Block[] }[] = [
         mediaBgClass: 'bg-transparent',
         title: 'Ariana',
         text: 'We automatically resolve 25% of customer queries across desktop and mobile using Intercom bots.',
-        image: '/Assets/Ariana.png',
+        image: '/Assets/Ariana.svg',
       },
       {
         id: 'namecheap',
@@ -280,7 +282,6 @@ function BlockCard({ block, index, colIndex }: { block: Block; index: number; co
 }
 
 export default function Page() {
-  const [isModalOpen, setIsModalOpen] = useState(true);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -297,31 +298,21 @@ export default function Page() {
           transition={{ duration: 0.8 }}
           className="min-h-screen bg-[#1f1f1f] selection:bg-blue-100 font-sans relative"
         >
-          {/* Sign up trigger */}
-          {!isModalOpen && (
-            <motion.button
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              onClick={() => setIsModalOpen(true)}
-              className="fixed top-4 right-4 md:top-8 md:right-8 z-40 bg-[#8b3dff] hover:bg-[#9d5aff] text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full text-sm md:text-base font-bold shadow-lg shadow-[#8b3dff]/30 transition-all hover:scale-105 active:scale-95 border border-white/10"
-            >
-              Sign Up
-            </motion.button>
-          )}
-
-          {/* Top Left Logo - Persistent Branding */}
+          {/* Top Left Logo - Restore fixed branding position */}
           <div className="fixed top-4 left-4 md:top-8 md:left-8 z-[110] transition-transform hover:scale-105">
-            <Image
-              src="/Assets/navlogo.png"
-              alt="Forescribe Logo"
-              width={140}
-              height={38}
-              className="object-contain w-[100px] md:w-[160px] h-auto"
-              priority
-            />
+            <a href="/" className="block focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded-lg">
+              <Image
+                src="/Assets/navlogo.svg"
+                alt="Forescribe Logo"
+                width={163}
+                height={38}
+                className="object-contain w-[100px] md:w-[160px] h-auto"
+                priority
+              />
+            </a>
           </div>
 
-          {/* Grid Section - Infinite Scroll */}
+          {/* Grid Section - Infinite Scroll - Revert to original gap values */}
           <div className="overflow-hidden h-screen">
             <div className="animate-scroll-up">
               {/* Grid - First Copy */}
@@ -342,6 +333,7 @@ export default function Page() {
                   ))}
                 </div>
               </section>
+
               {/* Grid - Duplicate Copy for seamless loop */}
               <section className="max-w-[1700px] mx-auto px-4 pb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 xl:gap-3">
@@ -365,7 +357,11 @@ export default function Page() {
         </motion.main>
       </AnimatePresence>
 
-      {mounted && <SignUpModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
+      {mounted && (
+        <BackdropOverlay>
+          <SignUpForm />
+        </BackdropOverlay>
+      )}
     </>
   );
 }
