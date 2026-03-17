@@ -112,8 +112,6 @@ During the engineering of this project, the following key assumptions were made 
 
 - **Brand Identity**: Adopted a signature `#1d1626` gradient for the authentication layer and `#1f1f1f` for the main canvas, assuming a primary goal of achieving deep, high-contrast visual hierarchy.
 
-- **Data Management**: As a frontend-focused task, data is managed via a centralized local structure in `app/page.tsx`. This assumes that in a production environment, this would be swapped for a REST/GraphQL API layer.
-
 ---
 
 ## ✨ Key Improvements & Features
@@ -124,17 +122,11 @@ Beyond the standard requirements, the following enhancements were added:
 
 - **Glassmorphism 2.0**: Implemented a deep-blur backdrop with a customized 20% opacity charcoal overlay for a premium SaaS feel.
 
-- **Micro-Hover Effects**: 
-  - Cards respond with subtle scale (`1.01x`) and brightness adjustments
-  - Buttons feature custom purple-glow shadows (`#8b3dff/30`) on interaction
-
 - **Pixel Perfection**: Standardized border-radius (`2.5rem`) and standardized typography sizing for a professional, cohesive identity.
 
 ### Performance Optimizations
 
 - **Hydration Safety**: Added automatic mounting guards to ensure zero-error rendering across all browsers.
-
-- **Branding Persistence**: The company logo is fixed at the top-left with a high z-index (`110`) and `priority` loading, ensuring it stays sharp and visible above and beyond any transitions.
 
 - **60fps Animations**: All motion effects are GPU-accelerated using transform properties instead of layout-affecting changes.
 
