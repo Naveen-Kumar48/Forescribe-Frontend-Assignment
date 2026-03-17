@@ -1,6 +1,6 @@
 # ✨ Forescribe Frontend Assignment
 
-A pixel-perfect frontend masterpiece engineered with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**. This project delivers a sophisticated, responsive masonry grid and a premium glassmorphism authentication interface—optimized for ultra-smooth 60fps performance and high-density visual clarity.
+A pixel-perfect frontend masterpiece engineered with **Next.js 16**, **Tailwind CSS**, and **Framer Motion**. This project delivers a sophisticated, responsive masonry grid and a premium glassmorphism authentication interface—optimized for ultra-smooth 60fps performance and high-density visual clarity.
 
 🌐 **Live Demo**: [https://forescribe-frontend-assignment.vercel.app/](https://forescribe-frontend-assignment.vercel.app/)
 
@@ -71,21 +71,26 @@ Forescribe-Frontend-Assignment/
 │   └── ContactForm.tsx           # Lead generation contact form
 │
 ├── hooks/                        # Custom React hooks
-│   └── use-mobile.ts             # Mobile detection hook
+│   └── use-mobile.ts             # Mobile viewport detection hook
 │
 ├── lib/                          # Utility functions
 │   └── utils.ts                  # Tailwind class merger (cn function)
 │
 ├── public/                       # Static assets
-│   └── Assets/                   # Brand logos, icons, and user photos
+│   └── Assets/                   # Brand logos, icons, and user photos 
 │
-├── .next/                        # Next.js build output
+├── .next/                        # Next.js build output (generated)
+|
+│
 ├── .eslintrc.json                # ESLint configuration
 ├── .gitignore                    # Git ignore rules
-├── next.config.ts                # Next.js configuration
-├── package.json                  # Project dependencies
-├── postcss.config.mjs            # PostCSS configuration
-└── tsconfig.json                 # TypeScript configuration
+├── eslint.config.mjs             # ESLint flat config (new format)
+├── next-env.d.ts                 # Next.js TypeScript environment declarations
+├── next.config.ts                # Next.js configuration (TypeScript)
+├── package.json                  # Project dependencies and scripts
+├── package-lock.json             # Locked dependency versions
+├── postcss.config.mjs            # PostCSS configuration (ES module)
+└── tsconfig.json                 # TypeScript compiler configuration
 ```
 
 ---
