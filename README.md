@@ -150,7 +150,7 @@ Beyond the standard requirements, the following enhancements were added:
 
 ## 🛠️ Technologies Used
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Language**: TypeScript
@@ -178,5 +178,5 @@ Visit the live deployment: **[https://forescribe-frontend-assignment.vercel.app/
 
 <div align="center">
   <em>Made with ❤️ from Naveen Kumar</em><br/>
-  <sub>Full Stack Developer | Crafting the future, one pixel at a time</sub>
+  <sub>Full Stack Developer </sub>
 </div>
